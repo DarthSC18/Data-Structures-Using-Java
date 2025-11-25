@@ -1,0 +1,22 @@
+package bda;
+import java.util.*;
+
+public class NumberReversal {
+	public static void main(String[] args) {
+		int n,k,r;
+		r=0;
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter The Number: ");
+		n=sc.nextInt();
+		int n1=n;
+		while(n>0) 
+		{
+			k =n%10;
+			r=r*10+k;
+			n=n/10;
+		}
+		
+		System.out.println("Reverse of "+n1+" is "+r);
+	}
+
+}
