@@ -1,0 +1,42 @@
+package Queue;
+
+public class PriorityQueue {
+	
+	
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] elements =new int[3];
+		int[] priority=new int[3];
+		int count =0;
+		elements[0]=10;
+		priority[0]=2;
+		count++;
+		elements[1]=20;
+		priority[1]=1;
+		
+		elements[2]=30;
+		priority[2]=3;
+		count++;
+		 while(count>0) {
+			 int highest=0;
+			 
+			 for(int i=1; i<count;i++) {
+				
+				 if(priority[i]<priority[highest]) {
+					 highest=i;
+				 }
+				 
+			 }
+		
+		 System.out.println("Served Element: "+elements[highest]+"having priority("+priority[highest]+")");
+		 for(int i=highest;i<count;i++) {
+			 elements[i]=elements[i+1];
+			 priority[i]=priority[i+1];
+		 }
+		 count--;
+		 }
+
+	}
+
+}
